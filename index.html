@@ -1,191 +1,104 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8">
-    <title>My Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <img src="img/baseball.jpeg" width="100" heigth="100">
+    My Profile
+  <nav>
+    <ul class="main-nav">
+      <li><a href="#work">経歴</a></li>
+      <li><a href="#skill">資格</a></li>
+      <li><a href="#job">趣味</a></li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <h1>自己紹介</h1>
+    <!-- <p>現在、愛知県でサラリーマンしております。今の会社で働き始めて早１０年が経ちました。新しい事にチャレンジしようとプログラミングを始めました。独学でドットインストールを利用しながらプログラミングを、勉強しています。あと投資信託もやっております。まだまだ未熟で何をしていいのか理解していませんが、今後は独立、フリーランスまで成長出来ればと考え、１日短時間でも勉強をしています。</p> -->
+    <p>現在、愛知県でサラリーマンしております。<br>
+       今の会社で働き始めて早１０年が経ちました。<br>
+       新しい事にチャレンジしようとプログラミングを始めました。<br>
+       独学でドットインストールを利用しながらプログラミングを、<br>
+       勉強しています。あと投資信託もやっております。<br>
+       まだまだ未熟で何をしていいのか理解していませんが、<br>
+       今後は独立、フリーランスまで成長出来ればと考え、<br>
+       １日短時間でも勉強をしています。</p>
+    <article>
+      <h2>生い立ち</h2>
+      <p>
+        出身地:　　京都府八幡市<br>
+        学歴:　　　京都建築大学校<br>
+        血液型:　　A型<br>
+        生年月日:　１９８６年４月２６日</p>
+        <h2>コメント</h2>
+        <p>ここまで読んでいただきありがとうございました。<br>
+        <strong>Twitter</strong>もしておりますので、下の<strong>Twitter</strong>から<br>
+        飛んで頂き、フォローよろしくお願い致します。
+      </p>
+    </article>
+    <section>
+      <h2 id="work">経歴</h2>
+      <table>
+          <tr>
+            <th>年</th>
+            <th>社名</th>
+          </tr>
+          <tr>
+            <td>2008-2009</td>
+            <td>堀亀工務店</td>
+          </tr>
+          <tr>
+            <td>2009-2011</td>
+            <td>くら寿司
+            </td>
+          </tr>
+          <tr>
+            <td>2011-2021</td>
+            <td>コストコ</td>
+          </tr>
 
-    <style>
-    body,h1,h2,p {
-      margin: 0;
-    }
-    img {
-      display: block;
-      vertical-align: middle;
-    }
-    a {
-      text-decoration: none;
-      display: block;
-    }
-
-.page_title {
-  text-align: center;
-  position:absolute;
-  top: 120px;
-  left: calc(50% - 214px/2 + 50px);
-  font-family: 'Alex Brush', cursive;
-  color: white;
-}
-.main_img{
-  width: 200px;
-  height: 200px;
-  border-radius: 150px;
-  box-sizing: border-box;
-  border: 8px solid white;
-  position: absolute;
-  top: calc(250px - 100px);
-  left: calc(50% - 100px);
-}
-.top_section {
-  background-image: linear-gradient(45deg,#ff929e 0%, #ff9362 100%);
-  height: 500px;
-}
-
-body {
-  font-family: 'Cabin', sans-serif;
-  color: #5e6c77;
-  background-image: url(img/game.jpeg);
-  background-size: cover;
-}
-
-.my_name {
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  top: 360px;
-  left: calc(50% - 33px);
-}
-.my_jobs {
-  color: white;
-  font-size: 14px;
-  position: absolute;
-  top: 380px;
-  left: calc(50% - 279px/2);
-}
-
-.about_section {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.about_title {
-  color: #ffb6a5;
-  margin-bottom: 15px;
-}
-.about_detail {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-.message_section {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  text-align: center;
-}
-.message_title {
-  color: #ffb6a5;
-  margin-bottom: 15px;
-}
-.message_img {
-  width: 150px;
-  height: 150px;
-  border-radius: 200px;
-  box-sizing: border-box;
-  border: 5px solid white;
-  box-shadow: 0 5px 30px rgba(116, 117, 127, 0.3);
-  margin-left: auto;
-  margin-right: auto;
-}
-.message_detail {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-.footer_section {
-  background: #74757f;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  color: white;
-}
-
-.button {
-  width: 200px;
-  background: white;
-  color: #ffb6a5;
-  text-align: center;
-  padding: 15px;
-  border-radius: 30px;
-
-  position: absolute;
-  top: calc(500px - 49px/2);
-  left: calc(50% - 230px/2);
-
-  box-shadow: 0 5px 30px rgba(255, 147, 98, .5);
-}
-
-.main_section {
-  width: 980px;
-  background: white;
-  margin: 50px auto;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, .2);
-}
-
-  </style>
-
-  </head>
-  <body>
-
-    <div class="main_section">
-      
-      <div class="top_section">
-        <h1 class="page_title">My Profile Page</h1>
-        <img class="main_img" src="img/baseball.jpeg">
-        <p class="my_name">Takahito</p>
-        <p class="my_jobs">Rookie System Engineer | Rookie Web Designer</p>
-        <a href="https://twitter.com/home" class="button">FOLLOW</a>
-      </div>
-      
-      <div class="about_section">
-        <h2 class="about_title">ABOUT</h2>
-        <p class="about_detail">
-          生年月日:1986年4月26日<br>
-          出身地:京都府八幡市<br>
-          血液型:A型<br>
-          身長:175cm<br>
-          最終学歴:京都建築大学校<br>
-          職業:サラリーマン、<br>
-          副業勉強中<br>
-          経歴:<br>
-          2007年-2008年 堀亀工務店 大工<br>
-          2008年-2011年 くら寿司 アルバイト<br>
-          2011年-2021年 コストコ 鮮魚部門<br>
+      </table>
+      <h2 id="skill">資格</h2>
+      <ol>
+        <li>二級建築士</li>
+        <li>Mos Word</li>
+        <li>Mos Excel</li>
+      </ol>
+      <h2 id="job">趣味</h2>
+      <ol>
+        <li>野球</li>
+        <p>好きなプロ野球球団<br>
+           阪神タイガース
         </p>
-      </div>
-      
-      <div class="message_section">
-        <h2 class="message_title">MESSAGE</h2>
-        <img class="message_img" src="img/space.jpg">
-        <p class="message_detail">
-          こんにちは、たかひとです。<br>
-          プログラミングって最近流行っているけどどんなんだろう？<br>
-          なんだか難しそうだけど、自分にも出来るのかな？<br>
-          そう思いながらウェブカツを初めてみたんですが、結構面白いですね。
-          まさか、自分がHPをこんな簡単に作れるようになるとは思いませんでした。<br>
-          これからもプログラミング学習を頑張っていきたいと思いますので、<br>
-          応援よろしくお願いします！<br>
-        </p>
-      </div>
-      
-      <footer class="footer_section">
-        <p>Producted by WEBUKATU</p>
-      </footer>
+        <li>ゲーム</li>
+        <p>好きなゲームタイトル<br>
+           英雄伝説シリーズ<strong>（Falcom)</strong><br>
+           モンスターハンターシリーズ<strong>（Capcom)</strong><br>
+           ドラゴンクエスト<strong>（Square Enix)</strong>
+        <li>映画</li>
+      </p>
+      </ol>
 
-    </div>
+      <aside>
+        <h3><a href="https://twitter.com/home">twitter</a></h3>
+        
+      </aside>
       
-    </body>
+
+
+    </section>
+
+
+    
+  </main>
+  <footer>
+    <p><a href="#TOP"><strong>TOP</strong>へ戻る</a></p>
+  </footer>
+  </body>
+
 </html>
